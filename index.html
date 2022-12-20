@@ -1,0 +1,55 @@
+<html xmlns="http://www.w3.org/1999/html">
+
+<head>
+
+    <title>Security System</title>
+    <link href="securityStyle.css" type="text/css" rel="stylesheet" />
+
+</head>
+
+<body>
+
+<div class ="parent">
+    <div class="child">
+        <img src="Image/im1.jpeg" alt="Hellp" width="500" height="650">
+    </div>
+
+    <div class="child">
+        <div class="another">
+            <div class ="inp">
+                <p>Hello User</p>
+                <p id="p1"> Enter the message you want to encrypt:</p>
+                <form >
+                    <textarea id="text" name="message" cols="40" rows="4" required="true"></textarea>
+                    <button id="paste" type="button">Paste</button>
+                    <p>What do u want to do ??  <br />
+                        <input  type="radio" id = "radioE" name="EorD" value="E"
+                               checked="checked" autocomplete="off" /> Encrypt
+                        <input type="radio" id="radioD" name="EorD" value="D" autocomplete="off" />
+                        Decrypt
+                        </p>
+                    <label id ="p2"> Encryption Key : </label>  <input type="text" id="key" name="Key" size="15" maxlength="50" placeholder="secret key" required="true"></br><br/>
+
+                    <label id="p3">Select the encryption algorithm : </label>
+                        <select name ="algorithms" id="algorithms">
+                            <option value="OTP">OTP</option>
+                            <option value="3DES">3DES</option>
+                            <option value="AES">AES</option>
+                        </select>
+                    <button type=submit id="p4">Encrypt</button>
+                    <label id="p5"> Encrpted Message : </label> <textarea id="message" cols="40" rows="4"></textarea><br/>
+                    <button id="copy" type="button">Copy</button>
+                </form>
+
+            </div>
+        </div>
+
+
+    </div>
+
+</div>
+<script src="./crypto-js.js"></script>
+<script src="./onetimepad.js"></script>
+<script src = "Security.js"></script>
+</body>
+</html>
